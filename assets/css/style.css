@@ -1,0 +1,36 @@
+/* Body */
+body {
+    background-image: url("../images/mind.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-color: #000;
+}
+
+/* Card */
+.card {
+    border: 4px solid #000;
+    margin: 0 auto;
+}
+.wincount {
+    color: green;
+}
+
+.losscount {
+    color: red;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    background-color: #000;
+}
+
+/* Audio */
+audio {
+    height: 20px;
+    vertical-align: middle;
+}​
