@@ -6,7 +6,7 @@ let chances = 20;
 let guesses = [];
 
 document.onkeyup = function(event) {
-    let userGuess = event.key;
+    let userGuess = event.key.toLowerCase();
     let compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
 
     // Testing Output
@@ -36,11 +36,13 @@ if (chances === 0) {
     console.log(losses);
     console.log(chances);
     console.log(guesses);
+    
 
-    document.getElementById('picks1').innerHTML = userGuess
-    document.getElementById('picks2').innerHTML = guesses
-    document.getElementById('chanceleft').innerHTML = chances
-    document.getElementById('wincounter').innerHTML = wins
-    document.getElementById('losscounter').innerHTML = losses
+    document.querySelector(".picks1").innerHTML = userGuess;
+    document.querySelector(".picks2").innerHTML = guesses;
+    document.querySelector(".chanceleft").innerHTML = chances;
+    document.querySelector(".wcnt").innerHTML = wins;
+    document.querySelector(".lcnt").innerHTML = losses;
+
 };
 
