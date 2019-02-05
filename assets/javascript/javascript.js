@@ -5,9 +5,10 @@ let losses = 0;
 let chances = 20;
 let guesses = [];
 
+let compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
+
 document.onkeyup = function(event) {
     let userGuess = event.key.toLowerCase();
-    let compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
 
     // Testing Output
     console.log(userGuess);

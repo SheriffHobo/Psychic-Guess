@@ -14,6 +14,7 @@ body {
 .card {
     border: 4px solid #000;
     margin: 0 auto;
+    height: calc(100% - 15px);
 }
 .wincount {
     color: green;
