@@ -8,6 +8,11 @@ let guesses = [];
 document.onkeyup = function(event) {
     let userGuess = event.key;
     let compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
+
+    // Testing Output
+    console.log(userGuess);
+    console.log(compGuess);
+
 if (compGuess === userGuess) {
     wins++;
     guesses.push(userGuess);
@@ -26,11 +31,16 @@ if (chances === 0) {
     location.reload();
     }
 
-    document.getElementById("picks1").innerHTML = userGuess
-    document.getElementById("picks2").innerHTML = guesses
-    document.getElementById("chanceleft").innerHTML = chances
-    document.getElementById("wincounter").innerHTML = wins
-    document.getElementById("losscounter").innerHTML = losses
+    // Testing Output
+    console.log(wins);
+    console.log(losses);
+    console.log(chances);
+    console.log(guesses);
 
+    document.getElementById('picks1').innerHTML = userGuess
+    document.getElementById('picks2').innerHTML = guesses
+    document.getElementById('chanceleft').innerHTML = chances
+    document.getElementById('wincounter').innerHTML = wins
+    document.getElementById('losscounter').innerHTML = losses
 };
 
