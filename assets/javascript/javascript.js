@@ -19,7 +19,7 @@ if (compGuess === userGuess) {
     guesses.push(userGuess);
     chances--;
     alert('You did it! Press ok and keep going!');
-    // Need some logic that resets teh comp guess if the user guesses correctly
+    // Need some logic that resets compGuess if the user guesses correctly
     // Need some logic to validate userGuess is a letter
 } else if (compGuess !== userGuess) {
     losses++;
