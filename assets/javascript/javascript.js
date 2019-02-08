@@ -8,7 +8,7 @@ let compGuess;
 
 const genCompGuess = () => {
     compGuess = compChoices[Math.floor(Math.random() * compChoices.length)];
-    console.log(compGuess);
+    console.log(compGuess); // Testing Output.
 };
 
 const resetGame = () => {
@@ -26,32 +26,31 @@ genCompGuess();
 document.onkeyup = function (event) {
     let userGuess = event.key.toLowerCase();
 
-    // Testing Output
-    console.log(userGuess);
+    console.log(userGuess); // Testing Output.
     console.log(compGuess);
     console.log(compChoices.includes(userGuess));
 
-    if (compChoices.includes(userGuess)) {
+    if (compChoices.includes(userGuess)) { // Tests to see if the character the user typed, matches what's in the compChoices array. 
         document.querySelector(".picks1").innerHTML = userGuess;
         if (compGuess === userGuess) {
             wins++;
             guesses.push(userGuess);
             chances--;
             alert('You did it! Press ok and keep going!');
-            genCompGuess();
+            genCompGuess(); // resets the game, without reloading the whole page.
         } else {
             losses++;
             guesses.push(userGuess);
             chances--;
         }
-    } else if (userGuess = 3) {
+    } else if (userGuess = 3) { // Cheat for testing.
         wins++;
         wins++;
         wins++;
         wins++;
         wins++;
     } else {
-        alert('This is not a letter. Press OK and try again.');
+        alert('This is not a letter. Press OK and try again.'); // If the userGuess is not in the compChooices array, the user gets this error message.
     };
 
     if (chances === 0) {
@@ -62,13 +61,12 @@ document.onkeyup = function (event) {
         resetGame();
     }
 
-    // Testing Output
-    console.log(wins);
+    console.log(wins); // Testing output.
     console.log(losses);
     console.log(chances);
     console.log(guesses);
 
-    document.querySelector(".picks2").innerHTML = guesses;
+    document.querySelector(".picks2").innerHTML = guesses; // This block updates the elements in the HTML.
     document.querySelector(".chanceleft").innerHTML = chances;
     document.querySelector(".wcnt").innerHTML = wins;
     document.querySelector(".lcnt").innerHTML = losses;
